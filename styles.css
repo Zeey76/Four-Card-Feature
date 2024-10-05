@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins';
+    color: hsl(234, 12%, 34%);
+    background-color: hsl(0, 0%, 98%);
+}
+
+header {
+    text-align: center;
+    width: 90%;
+    margin: 2rem auto;
+}
+
+h1, h2 {
+    font-size: 1.5rem;
+}
+
+h1 {
+    font-weight: 400;
+}
+
+h2 {
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+h3 {
+    font-size: 1.35rem;
+    font-weight: 600;
+}
+
+p {
+    font-size: 0.9375rem;
+    font-weight: 200;
+    line-height: 1.5;
+    color: hsl(229, 6%, 66%);
+}
+
+.container {
+    width: 90%;
+    margin: 3rem auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+}
+.item {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1.7rem;
+    border-radius: 5px;
+}
+
+.item-1 {
+    border-top: 3px solid hsl(180, 62%, 55%);
+}
+
+.item-2 {
+    border-top: 3px solid hsl(0, 78%, 62%);
+}
+
+.item-3 {
+    border-top: 3px solid hsl(34, 97%, 64%);
+}
+
+.item-4 {
+    border-top: 3px solid hsl(212, 86%, 64%);
+}
+
+img {
+    display: block;
+    float: right;
+    margin-top: 1.8rem;
+}
+
+@media (min-width: 40rem) {
+    header {
+        width: 70%;
+    }
+
+    h1, h2 {
+        font-size: 2.5rem;
+    }
+
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 55rem) {
+    header {
+        width: 50%;
+    }
+    .container {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "item-1 item-2 item-4"
+        "item-1 item-3 item-4";
+    }
+
+    .item-1 {
+        grid-area: item-1;
+        align-self: center;
+    }
+
+    .item-2 {
+        grid-area: item-2;
+    }
+
+    .item-3 {
+        grid-area: item-3;
+    }
+
+    .item-4 {
+        grid-area: item-4;
+        align-self: center;
+    }
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+}
